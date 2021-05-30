@@ -5,17 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen",
-            "name": "nodemon debug",
-            "program": "${workspaceFolder}\\bin\\www.js",
+            "type": "node",
             "request": "launch",
-            "restart": true,
-            "runtimeExecutable": "nodemon",
+            "name": "Launch Program",
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "type": "node"
+            "program": "${workspaceFolder}\\bin\\www.js"
+        },
+        {
+            "type": "node",            
         }
     ]
 }

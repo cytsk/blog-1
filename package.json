@@ -1,18 +1,23 @@
 {
   "name": "express",
   "version": "1.0.0",
-  "main": "www.js",
-  "bin": {
-    "blog-1": "www.js"
-  },
+  "main": "bin/www.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "echo \"cross-env NODE-ENV=dev nodemon ./bin/www.js",
-    "prd": "echo \"cross-env NODE-ENV=production nodemon ./bin/www.js"
+    "dev": "cross-env NODE_ENV=dev nodemon ./bin/www.js",
+    "prd": "cross-env NODE_ENV=production nodemon ./bin/www.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "cytsk",
   "license": "ISC",
-  
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  },
+  "bin": {
+    "express": "www.js"
+  },
   "description": ""
 }

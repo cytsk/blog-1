@@ -47,16 +47,26 @@ const serverHandle = (req, res) => {
     // get post data
     getPostData(req).then(postData => {
         req.body = postData
+        const blogResult = handleBlogRouter(req, res)
 
         // process blog router
-        const blogData = handleBlogRouter(req, res)
-        if (blogData) {
-            res.end(
-                JSON.stringify(blogData)
-            )
-
+        if (blogResult) {            
+            blogResult.then(blogData => {
+                res.end(
+                    JSON.stringify(blogData)
+                )
+            })
             return
         }
+    
+        // const blogData = handleBlogRouter(req, res)
+        // if (blogData) {
+        //     res.end(
+        //         JSON.stringify(blogData)
+        //     )
+
+            // return
+        // }
             
         // process user router
         const userData = handleUserRouter(req, res)
