@@ -14,7 +14,13 @@
             "program": "${workspaceFolder}\\bin\\www.js"
         },
         {
-            "type": "node",            
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\bin\\www.js"
         }
     ]
 }
