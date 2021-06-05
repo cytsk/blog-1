@@ -8,10 +8,10 @@ function exec(sql) {
     const promise = new Promise((resolve, reject) => {
         conn.query(sql, (err, result) => {
             if (err) {
-                console.error("error is: ",err)
+                reject(err)
                 return
             }
-            console.log(result)
+            resolve(result)
         })
     })
     return promise

@@ -50,9 +50,9 @@ const serverHandle = (req, res) => {
         const blogResult = handleBlogRouter(req, res)
 
         // process blog router
-        if (blogResult) {            
+        if (blogResult) {
             blogResult.then(blogData => {
-                res.end(
+                return res.end(
                     JSON.stringify(blogData)
                 )
             })

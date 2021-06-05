@@ -5,9 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "type": "pwa-node",
             "request": "launch",
             "name": "Launch Program",
+            "console": "internalConsole",
+            "runtimeExecutable": "npm",
+            "outputCapture": "std",
+            "runtimeArgs": [
+                "run",
+                "prd"
+            ],
             "skipFiles": [
                 "<node_internals>/**"
             ],

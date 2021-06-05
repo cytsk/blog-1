@@ -13,15 +13,10 @@ const getList = (author, keyword) => {
 }
 
 const getDetail = (id) => {
-    return [
-        {
-            id: 1,
-            title: 'タイトル1',
-            content: '内容1',
-            createTime: 1621736909331,
-            author: 'zhangsan'
-        }
-    ]
+    const sql = `select * from blogs where id='${id}'`
+    return exec(sql).then(rows => {
+        return rows[0]
+    })
 }
 
 const newBlog = (blogData = {}) => {
